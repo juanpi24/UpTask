@@ -25,5 +25,12 @@ router.get('/proyectos/:url', proyectosControllers.proyectoPorUrl);
 
 //Actualizar el proyecto
 router.get('/proyecto/editar/:id', proyectosControllers.formularioEditar);
+router.post('/nuevo-proyecto/:id', 
+        body('nombre').not().isEmpty().trim().escape(),
+        proyectosControllers.actualizarProyecto);
+
+//Eliminar proyecto
+router.delete('/proyectos/:url', proyectosControllers.eliminarProyecto);        
+
 return router;
 }
