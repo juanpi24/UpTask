@@ -6,6 +6,7 @@ const { body } = require('express-validator/check');
 
 //importar controllers
 const proyectosControllers= require('../controllers/proyectosControllers');
+const tareasController= require('../controllers/tareasController');
 
 module.exports=function(){
 //ruta para el home
@@ -30,7 +31,16 @@ router.post('/nuevo-proyecto/:id',
         proyectosControllers.actualizarProyecto);
 
 //Eliminar proyecto
-router.delete('/proyectos/:url', proyectosControllers.eliminarProyecto);        
+router.delete('/proyectos/:url', proyectosControllers.eliminarProyecto);   
+ 
+// Tareas
+router.post('/proyectos/:url', tareasController.agregarTarea);   
+ 
+ // Actualizar Tarea
+ router.patch('/tareas/:id', tareasController.cambiarEstadoTarea);
+
+// Eliminar Tarea
+router.delete('/tareas/:id', tareasController.eliminarTarea);
 
 return router;
 }
