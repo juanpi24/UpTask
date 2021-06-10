@@ -3,3 +3,12 @@ extends layout
 block contenido 
     .contenido-principal
         h1 #{nombrePagina}
+        .panel.lista-proyectos-home.lista-proyectos
+                    ul#proyectos.proyectos
+                        if(proyectos.length) 
+                            each proyecto in proyectos
+                                li
+                                    a(href=`/proyectos/${proyecto.url}`)= proyecto.nombre
+                                                        
+                                
+                                    

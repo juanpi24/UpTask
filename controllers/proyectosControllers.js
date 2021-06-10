@@ -6,7 +6,7 @@ exports.proyectosHome= async (req,res)=>{
     const usuarioId = res.locals.usuario.id;
     const proyectos = await Proyectos.findAll({where: { usuarioId  }});
     res.render("index",{
-        nombrePagina:'Proyectos',
+        nombrePagina:'Listado de Proyectos',
         proyectos
     });
 }

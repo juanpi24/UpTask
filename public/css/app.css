@@ -168,6 +168,15 @@ body.index {
 .lista-proyectos ul li a:hover {
     color: #FDD835;
 }
+
+.lista-proyectos-home {
+    background-color: #607D8B;    
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto 0 auto;
+    padding: 2rem;
+    border: 1px solid #999;
+}
 /** Contenido Principal */
 .contenedor {
     display: flex;
