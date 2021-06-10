@@ -87,7 +87,7 @@ variables.env
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+#dist
 
 # Storybook build outputs
 .out
@@ -95,7 +95,7 @@ dist
 storybook-static
 
 # rollup.js default build output
-dist/
+#dist/
 
 # Gatsby files
 .cache/

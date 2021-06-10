@@ -8,8 +8,7 @@
     "dev": "nodemon ./index.js",
     "start": "node ./index.js",
     "watch": "webpack --w --mode development",
-    "postinstall": "./node_modules/.bin/webpack"
-  },
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/juanpi24/UpTask.git"
